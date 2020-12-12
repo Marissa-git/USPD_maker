@@ -1,0 +1,8 @@
+cx-Freeze==6.4.2
+importlib-metadata==3.1.1
+numpy==1.19.4
+pandas==1.1.5
+python-dateutil==2.8.1
+pytz==2020.4
+six==1.15.0
+zipp==3.4.0
