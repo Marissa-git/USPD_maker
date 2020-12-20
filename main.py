@@ -57,12 +57,12 @@ class Main(tk.Frame):
             return 1
 
         if os.path.isfile(filename):
-            file = pd.read_csv(filename, delimiter=';')
+            file = pd.read_csv(filename, delimiter=';', encoding="cp1251")
         else:
             self.show_warning("Введите корректное имя считываемого файла")
             return 1
         finish_file = pd.DataFrame(file.loc[file['USPD'] == USPD])
-        finish_file.to_csv(finish_filename, sep=";", index=False)
+        finish_file.to_csv(finish_filename, sep=";", index=False, encoding="cp1251")
         self.text_1.insert(1.0, 'Файл готов!')
 
         return filename
